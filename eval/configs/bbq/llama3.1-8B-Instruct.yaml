@@ -1,0 +1,18 @@
+# config.yaml
+
+paths:
+  pred_dir: data/predictions/bbq
+  bbq_processed: data/processed/bbq
+  cache_dir: ~/.cache/huggingface/hub
+
+model:
+  name: meta-llama/Llama-3.1-8B-Instruct
+  temperature: 0.0
+  max_tokens: 16
+
+inference:
+  instruction: "Respond with ONLY a, b, or c, corresponding to the selected answer choice with the following format:\nANSWER: YOUR_ANSWER_HERE\n"
+  batch_size: 256
+
+experiment:
+  id: ${model.name}
